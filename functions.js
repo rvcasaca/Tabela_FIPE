@@ -1,5 +1,14 @@
+const { text } = require("stream/consumers");
+
 //funções utilizadas
-function add_option(selectID,optionSelect)
+function add_option(selectID,optionSelect);{
+    var option = document.createElement("option");
+    option.text = text;
+    option.value = value;
+    var select = document.getElementById(selectID);
+    select.appendChild(option)
+
+}
 
 //montagem de inputs
 function mount_select_marcas(marcas){
