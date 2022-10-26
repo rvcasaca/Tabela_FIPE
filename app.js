@@ -23,14 +23,30 @@ function get_modelos(id_marca){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200){
-            var modelos = JSON.parse(xhttp.responseText);
+            var resposta = JSON.parse(xhttp.responseText);
             
-            mount_select_modelos(modelo.modelos)
+            mount_select_modelos(resposta.modelos)
         }
     };
     xhttp.open("GET", `${BASE_URL}/marcas/${id_marca}/modelos`, true);
     xhttp.send();
 }
+
+//Ano
+function get_ano(id_modelo){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200){
+            var ano = JSON.parse(xhttp.responseText);
+            
+            mount_select_ano(ano)
+        }
+    };
+    xhttp.open("GET", `${BASE_URL}/marcas/${id_marca}/modelos/${id_modelo}/anos`, true);
+    xhttp.send();
+}
+
+//Valor
 
 //execução principal
 console.warn("Antes de chamar get_marcas")

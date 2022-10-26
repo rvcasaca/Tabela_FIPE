@@ -1,7 +1,5 @@
-const { text } = require("stream/consumers");
-
 //funções utilizadas
-function add_option(selectID,optionSelect);{
+function add_option(selectID,text, value){
     var option = document.createElement("option");
     option.text = text;
     option.value = value;
@@ -14,13 +12,21 @@ function add_option(selectID,optionSelect);{
 function mount_select_marcas(marcas){
     console.log("mout_select_marcas")
     marcas.forEach(marcas => {
-        add_option("minhas_marcas", marcas.nome, marcas.codigo)
+        add_option("MINHASMARCAS", marcas.nome, marcas.codigo)
     });
 }
 
-function mount_select_modelos(){
+function mount_select_modelos(modelos){
     console.log(modelos)
-    modelos.forEach((modelo)=>{ add_option("modelo", modelo.nome, modelo.codigo)})
+    modelos.forEach((modelos)=> {
+        add_option("modelos", modelos.nome, modelos.codigo)
+    });
 }
 
+function mout_select_ano(ano){
+    console.log("mout_select_ano")
+    ano.forEach((ano) => {
+        add_option("ano",ano.nome, ano.codigo)
+    });
+}
 

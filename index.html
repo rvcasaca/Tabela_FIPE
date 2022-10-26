@@ -8,7 +8,13 @@
 </head>
 <body>
     Marcas:
-    <select onchange="getModelos(this.value)" name="marcas" id="MINHASMARCAS"></select>
+    <select onchange="get_modelos(this.value)" name="marcas" id="MINHASMARCAS">Selecione...</select>
+
+    Modelos:
+    <select onchange ="get_ano(this.value)" name="modelos" id="modelos"></select>
+    
+    Ano:
+    <select name="ano" id="ano"></select>
     
     <script src="app.js"></script>
     
