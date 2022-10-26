@@ -1,10 +1,17 @@
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
- if (this.readyState == 4 && this.status == 200) {
-// Typical action to be performed when the document is ready:
-var marcas = JSON.parse(xhttp.responseText)
+//funções utilizadas
+function add_option(selectID,optionSelect)
 
-mountSelectMarcas(marcas)
-};
-xhttp.open("GET", "https://parallelum.com.br/fipe/api/v1/carros/marcas", true);
-xhttp.send();
+//montagem de inputs
+function mount_select_marcas(marcas){
+    console.log("mout_select_marcas")
+    marcas.forEach(marcas => {
+        add_option("minhas_marcas", marcas.nome, marcas.codigo)
+    });
+}
+
+function mount_select_modelos(){
+    console.log(modelos)
+    modelos.forEach((modelo)=>{ add_option("modelo", modelo.nome, modelo.codigo)})
+}
+
+
