@@ -1,6 +1,7 @@
-//URL padrão da API
+//Constantes
 
 const BASE_URL = "https://parallelum.com.br/fipe/api/v1/carros"
+ 
 
 //Chamadas do Request
 //Marcas
@@ -30,10 +31,11 @@ function get_modelos(id_marca){
     };
     xhttp.open("GET", `${BASE_URL}/marcas/${id_marca}/modelos`, true);
     xhttp.send();
-}
+    }
 
 //Ano
 function get_ano(id_modelo){
+    var id_marca = document.getElementById(MINHASMARCAS.marcas.codigo)
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200){
@@ -49,5 +51,4 @@ function get_ano(id_modelo){
 //Valor
 
 //execução principal
-console.warn("Antes de chamar get_marcas")
 get_marcas();

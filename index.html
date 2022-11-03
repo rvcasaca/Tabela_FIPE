@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +7,21 @@
     <title>Consulta da Tabela FIPE</title>
 </head>
 <body>
+    <!-- Chamadas -->
+    
     Marcas:
-    <select onchange="get_modelos(this.value)" name="marcas" id="MINHASMARCAS">Selecione...</select>
+    <select onchange="get_modelos(this.value)" name="marcas" id="MINHASMARCAS"><option>Selecione a Marca</option></select>
 
     Modelos:
-    <select onchange ="get_ano(this.value)" name="modelos" id="modelos"></select>
+    <select onchange ="get_ano(this.value)" name="modelos" id="meus_modelos"><option>Selecione o ano</option></select>
     
     Ano:
-    <select name="ano" id="ano"></select>
+    <select onchange = "get_valores(this.value)" name="ano" id="meu_ano"><option>Selecione o Modelo</option></select>
+   
     
+
+
+    <!-- JS -->
     <script src="app.js"></script>
     
     <script src="functions.js"></script>
