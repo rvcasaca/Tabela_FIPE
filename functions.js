@@ -1,5 +1,5 @@
 //funções utilizadas
-function add_option(selectID,text, value){
+function add_option(selectID,text,value){
     var option = document.createElement("option");
     option.text = text;
     option.value = value;
@@ -12,7 +12,7 @@ function add_option(selectID,text, value){
 function mount_select_marcas(marcas){
     console.log(marcas)
     marcas.forEach(marcas => {
-        add_option("MINHASMARCAS", marcas.nome, marcas.codigo)
+        add_option("minhas_marcas", marcas.nome, marcas.codigo)
     });
 }
 
@@ -23,10 +23,10 @@ function mount_select_modelos(modelos){
     });
 }
 
-function mout_select_ano(ano){
-    console.log("mout_select_ano")
-    ano.forEach((ano) => {
-        add_option("meus_ano",ano.nome, ano.codigo)
+function mount_select_anos(anos){
+    console.log(anos)
+    anos.forEach((anos) => {
+        add_option("meus_anos",anos.nome, anos.codigo)
     });
 }
 
