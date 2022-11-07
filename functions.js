@@ -30,3 +30,9 @@ function mount_select_anos(anos){
     });
 }
 
+function mount_select_valores(valores){
+    console.log(valores)
+    valores.forEach((valores) => {
+        add_option("valores_carro",valores.valor)
+    });
+}

@@ -13,12 +13,13 @@
     <select onchange="get_modelos(this.value)" name="marcas" id="minhas_marcas"><option>Selecione a marca</option></select>
 
     Modelos:
-    <select onchange ="get_ano(this.value)" name="modelos" id="meus_modelos"><option>Selecione o modelo</option></select>
+    <select onchange="get_anos(this.value)" name="modelos" id="meus_modelos"><option>Selecione o modelo</option></select>
     
     Ano:
-    <select name="ano" id="meus_anos"><option>Selecione o ano</option></select>
+    <select onchange="get_valores(this.value)" name="ano" id="meus_anos"><option>Selecione o ano</option></select>
    
-    
+    Valores:
+    <div id="valores_carro"></div>
 
 
     <!-- JS -->
