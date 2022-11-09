@@ -56,14 +56,13 @@ function get_valores(id_ano){
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200){
             var resposta = JSON.parse(xhttp.responseText);
-            
+            console.log(resposta)
+            document.getElementById("valores_carro").innerHTML = JSON.stringify(resposta.Valor)
            
         }
     };
     xhttp.open("GET", `${BASE_URL}/marcas/${id_marca}/modelos/${id_modelo}/anos/${id_ano}`, true);
     xhttp.send();
-
-    document.getElementById("valores_carro") = resposta
 }
 //execução principal
 
